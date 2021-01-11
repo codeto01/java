@@ -1,0 +1,194 @@
+import java.util.*;
+
+     class Banking{
+     String name;
+    int account_number1,account_number2,account_number;
+    String type_of_account;
+        
+
+    int balance,n,i;
+       int s[];
+         Banking(){
+            this.name=name;
+            this.account_number=account_number;
+            this.type_of_account=type_of_account;
+            
+ }
+Scanner sc=new Scanner(System.in); 
+
+void create_Account(){
+System.out.println("\nEnter the number of accounts you want to create:");
+n=sc.nextInt();
+int s[]=new int[n];
+System.out.println("\nEnter the names:");
+for(i=0;i<=n;i++){
+name=sc.nextLine();
+}
+System.out.println("enter the type of account"); 
+       for(i=0;i<n;i++){
+      String type_of_account=sc.nextLine();
+}
+System.out.println("\nEnter the account number:");
+for(i=0;i<n;i++){
+account_number1=sc.nextInt();
+}
+
+this.s=s;
+}
+           
+                    
+   
+
+void Show_account_details(){
+
+System.out.println("\nEnter the name:");
+String name=sc.nextLine();
+
+System.out.println("enter the type of account"); 
+      String type_of_account=sc.nextLine();
+System.out.println("\nEnter the account number:");
+account_number=sc.nextInt();
+}
+   void deposit(){
+          int amount;
+        System.out.println("\nEnter the number of deposits you want to make:");
+     n=sc.nextInt();
+     int s[]=new int[n];
+     System.out.println("\nEnter the names:");
+    for(i=0;i<=n;i++){
+   name=sc.nextLine();
+    }
+          
+            System.out.println("\nEnter the account number:");
+              for(i=0;i<n;i++){
+    account_number2=sc.nextInt();
+      }
+        if(account_number1==account_number2){
+   
+System.out.println("enter the Amount");
+       for(i=0;i<n;i++){
+    amount=sc.nextInt();
+     System.out.println("DEPOSITTED SUCCESFULLY!"); 
+       
+             
+ 
+          balance=balance+amount;
+             }
+}
+          else{
+            System.out.println("WRONG ACCOUNT NUMBER!");
+           System.out.println("BALANCE CANNOT BE SHOWN");
+}
+
+           
+}
+void withdraw(){
+           int second_amount;
+
+         System.out.println("\nEnter the name:");
+         String name=sc.nextLine();
+
+            System.out.println("\nEnter the account number:");
+              account_number=sc.nextInt();
+                   System.out.println("enter the amount");
+            second_amount=sc.nextInt();
+           if(second_amount>=balance){
+               System.out.println("withdrawal not possible");
+                     }
+                     else {
+            balance=balance-second_amount;
+             System.out.println("Amount withdrawn Sucessfully");
+                    
+   }
+}
+
+    void display(){
+              System.out.println("-----------------------");
+               for(i=0;i<n;i++){
+             System.out.println(" Hello Mr./Ms " +name);
+              }
+            System.out.println("-------------------------");
+               
+           System.out.println(" your Account is created");
+            System.out.println("-------------------------");
+              for(i=0;i<n;i++){
+            System.out.println("Account number is: " +account_number1);
+                   }
+             System.out.println("Account type is: " +type_of_account);
+             System.out.println("balance is : " +balance);
+             System.out.println("-------------------------");
+
+     }
+  void display2(){
+  System.out.println("balance is : " +balance);
+}
+void display3(){
+  System.out.println("balance is : " +balance);
+}
+
+
+void Thanks(){
+System.out.println("Thanks for Banking!");
+}
+void display4(){
+System.out.println(" Hello Mr./Ms " +name);
+          System.out.println("Account number is: " +account_number);
+          System.out.println("Account type is: " +type_of_account);
+             System.out.println("balance is : " +balance);
+}
+}
+
+class Bank{
+        public static void main(String[]args){
+            String name;
+    int account_number,balance;
+    String type_of_account;    
+       Scanner sc=new Scanner(System.in); 
+        
+                      
+            
+
+                     
+           Banking b=new Banking(); 
+  while(true) {
+         System.out.println("\n1.create account\n2.Show account details\n3.Deposit\n4.Withdraw\n5.exit\n");
+         System.out.println("Enter the option: "); 
+         
+           int z=sc.nextInt(); 
+             
+         switch(z) 
+          {
+        case 1:b.create_Account();
+             b.display();
+            b.Thanks();
+        break; 
+       case 2: 
+ 	b.Show_account_details();
+         System.out.println("the details are:");
+           b.display4();
+            b.Thanks();
+        break; 
+      case 3:
+        b.deposit();
+        
+             b.display2();
+             b.Thanks();
+      break;
+      case 4:
+        b.withdraw();
+           
+         b.display3();
+          b.Thanks();
+         break;        			
+       case 5:
+ 	 System.exit(0);            
+ 	 break; 
+       default:
+        System.out.println("invalid choice");
+      
+        
+   }  
+   }
+}
+}
+    
