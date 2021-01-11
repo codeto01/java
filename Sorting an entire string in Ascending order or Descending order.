@@ -1,0 +1,67 @@
+import java.util.*;
+class Temple{
+ int n,i,j;
+   String call;
+  String Hall[];
+  String temp;
+Scanner sc=new Scanner(System.in);    
+void take_Input(){
+     System.out.println("Enter the string:");
+     call=sc.nextLine();
+  Hall=call.split(" ");
+  }
+void ascending(){
+   int n=Hall.length;
+     for(i=0;i<n;i++){
+       for(j=i+1;j<n;j++){
+  if(Hall[i].compareTo(Hall[j])>0){
+ temp=Hall[i];
+ Hall[i]=Hall[j];
+ Hall[j]=temp;
+     }
+   }
+}
+System.out.println("In ascending order:");
+  for(i=0;i<n;i++)
+     System.out.print(Hall[i]+" ");
+}
+
+void descending(){
+  int n=Hall.length;
+  for(i=0;i<n;i++){
+  for(j=i+1;j<n;j++){
+ if(Hall[i].compareTo(Hall[j])>0){
+ temp=Hall[i];
+ Hall[i]=Hall[j];
+  Hall[j]=temp;
+  }
+ }
+}
+System.out.println("In descending order:");
+for(i=0;i<n;i++)
+System.out.print(Hall[i]+" ");
+}
+}
+class God{
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    Temple t=new Temple();
+   while(true){
+        System.out.println("\n1.take input\n2.ascending\n3.descending\n4.exit\n");
+          System.out.println("Enter the choice:");
+     int ch=sc.nextInt();
+    switch(ch){
+ case 1:t.take_Input();
+ break;
+  case 2:t.ascending();
+  break;
+case 3:t.descending();
+break;
+case 4:System.exit(0);
+break;
+default:
+   System.out.println("Invalid choice:");
+   }
+  }
+ }
+}
