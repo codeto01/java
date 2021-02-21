@@ -1,0 +1,39 @@
+interface Animal{
+	void legs();
+}
+interface Animal2 extends Animal{
+	void tail();
+}
+class Lion{
+	void skin(){
+		System.out.println("The skin colour is brown");
+		}
+	void teeth(){
+		System.out.println("There are 48 teeths:");
+		}
+
+	}
+class Tiger extends Lion implements Animal2{
+	public void legs(){
+		System.out.println("There are 14 legs:");
+		}
+	public void tail(){
+		System.out.println("Ther is 1 tail:");
+		}
+	void teeth(){
+		System.out.println("There are 32 teeths:");
+		}
+	}
+class Kingdom{
+	public static void main(String[]args){
+	Lion l=new Lion();
+	Tiger t=new Tiger();
+	Lion l1;
+	l1=l;
+	l1.skin();
+	l1.teeth();
+	l1=t;
+	t.legs();
+	t.teeth();
+	}
+}
